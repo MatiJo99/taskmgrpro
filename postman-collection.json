@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "TaskMgr API Collection",
+    "description": "Postman collection for TaskMgr REST API endpoints",
+    "schema": "https://schema.postman.com/api/v2.1.0/",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "json",
+          "json": {
+            "description": "Fix login bug"
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"]
+        },
+        "description": "Create a new task with pending status"
+      },
+      "response": []
+    },
+    {
+      "name": "List All Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"]
+        },
+        "description": "Get all tasks from the database"
+      },
+      "response": []
+    },
+    {
+      "name": "Filter Tasks by Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks?status=pending",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks"],
+          "query": [
+            {
+              "key": "status",
+              "value": "pending",
+              "description": "Filter by task status"
+            }
+          ]
+        },
+        "description": "Filter tasks by status (pending or completed)"
+      },
+      "response": []
+    },
+    {
+      "name": "Mark Task as Completed",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/1/complete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks", "1", "complete"]
+        },
+        "description": "Mark a task as completed by ID"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Task",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tasks", "1"]
+        },
+        "description": "Delete a task by ID"
+      },
+      "response": []
+    }
+
+  ]
+}
