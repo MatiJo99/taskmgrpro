@@ -87,9 +87,22 @@ header h3 { font-size: 1.6em; margin-bottom: 30px; color: #999; }
 .tasks-container { width: 500px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 .task-form { display: flex; gap: 10px; width: 100%; box-shadow: none; padding: 0; margin: 20px 0; }
 .task-form button { width: auto; white-space: nowrap; margin: 0; border-radius: 4px; background: #cce5ff; }
-.task-list { margin-top: 20px; }
 .task-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #eee; }
-.task-item.completed span { text-decoration: line-through; color: #aaa; }
+.task-item.completed span {  color: #6514b7; }
 .task-actions button { border: none; background: none; margin-left: 10px; cursor: pointer; font-size: 1.1em; }
 .complete-btn { color: green; }
 .delete-btn { color: red; }
+.task-list {
+  list-style-type: decimal;
+  padding-left: 24px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+.task-number {
+  font-weight: bold;
+  margin-right: 8px;
+  color: #555; /* Adjust color to match your design */
+}
+.task-description {
+  flex-grow: 1; /* Pushes the action buttons to the right side */
+}
